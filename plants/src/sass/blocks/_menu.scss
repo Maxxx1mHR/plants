@@ -1,10 +1,26 @@
+header {
+    background-color: $main-bgc;
+}
 .menu {
-    height: 134px;
+    min-height: 134px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 42px 110px;
+    
     &__list {
         min-width: 452px;
         display: flex;
         justify-content: space-between;
+        list-style-type: none;
+
+    }
+    &__link {
+        font-family: Inika;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 50px;
+        color: #010201;
+        text-decoration: none;
     }
 }
