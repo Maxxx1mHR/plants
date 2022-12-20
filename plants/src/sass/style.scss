@@ -3,7 +3,7 @@
 
 
 * {
-    font-family: Inter, Inika, sans-serif;
+    // font-family: Inter, Inika, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -34,3 +34,4 @@ main {
 @import 'blocks/menu';
 @import 'blocks/footer';
 @import 'blocks/welcome';
+@import 'blocks/about';

@@ -1,11 +1,18 @@
 .welcome {
+    max-height: 532px;
+    background-color: $main-bgc;
+    &__leafs {
+        width: 448px;
+        height: 408px;
+    }
+    &__wrapper {
     padding: 62px 110px;
     display: flex;
-    background-color: $main-bgc;
-    width: 100%;
+
     justify-content: space-between;
-    background-color: $main-bgc;
-    &__wrapper {
+    font-family: Inter;
+    }
+    &__block {
         width: 549px;
     }
     &__header {
@@ -14,7 +21,7 @@
         line-height: 50px;  
         color: #717171;
         span {
-            color: #499A18;
+            color: $green;
         }  
     }
     &__descr {

@@ -22,5 +22,8 @@ header {
         line-height: 50px;
         color: #010201;
         text-decoration: none;
+        &:hover {
+            color: $orange;
+        }
     }
 }
