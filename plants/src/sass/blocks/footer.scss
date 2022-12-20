@@ -1,0 +1,29 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 110px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 50px;
+
+    &__descr {
+        display: flex;
+        width: 182px;
+        justify-content: space-between;
+    }
+    &__git {
+        text-decoration: none;
+        color: #000000;
+    }
+    &__social {
+        width: 188px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__link {
+            display: flex;
+            align-items: center;
+        }
+}

@@ -1,0 +1,39 @@
+.welcome {
+    padding: 62px 110px;
+    display: flex;
+    background-color: $main-bgc;
+    width: 100%;
+    justify-content: space-between;
+    background-color: $main-bgc;
+    &__wrapper {
+        width: 549px;
+    }
+    &__header {
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 50px;  
+        color: #717171;
+        span {
+            color: #499A18;
+        }  
+    }
+    &__descr {
+        margin-top: 42px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 35px;
+    }
+    &__btn {
+        margin-top: 48px;
+        width: 158px;
+        height: 44px;
+        border: 2px solid #E06733;
+        border-radius: 10px;
+        font-weight: 400;
+        font-size: 16px;
+        background-color: $main-bgc;
+    }
+
+
+
+}
