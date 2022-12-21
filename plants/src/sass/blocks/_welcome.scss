@@ -15,7 +15,7 @@
     &__block {
         width: 549px;
     }
-    &__header {
+    &__title {
         font-weight: 700;
         font-size: 45px;
         line-height: 50px;  
@@ -26,19 +26,20 @@
     }
     &__descr {
         margin-top: 42px;
+        margin-bottom: 48px;
         font-weight: 400;
         font-size: 20px;
         line-height: 35px;
     }
     &__btn {
-        margin-top: 48px;
-        width: 158px;
-        height: 44px;
+        padding: 14px 27px;
         border: 2px solid #E06733;
         border-radius: 10px;
         font-weight: 400;
         font-size: 16px;
         background-color: $main-bgc;
+        text-decoration: none;
+        color: #000000;
     }
 
 
