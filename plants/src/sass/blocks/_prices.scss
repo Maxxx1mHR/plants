@@ -1,0 +1,53 @@
+.prices {
+    &__title {
+        margin-top: 38px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left {
+        font-family: 'Inter';
+        font-weight: 700;
+        font-size: 40px;
+        color: #000000;
+    }
+    &__right {
+        font-family: 'Inter';
+        font-weight: 700;
+        font-size: 40px;
+        color: #000000;
+        max-width: 452px;
+        span {
+            color: $green;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+    &__info {
+        margin-top: 38px;
+    }
+    &__btn {
+        font-family: 'Inika';
+        font-weight: 700;
+        font-size: 20px;
+        text-align: center;
+        color: $orange;
+        border: 1px solid #E06733;
+        border-radius: 5px;
+        padding: 12px 30px;
+        cursor: pointer;
+        transition: all 0.6s;
+        &:hover {   
+            background-color: $orange;
+            color: #ffffff;
+        }
+    }
+    &__img {
+        margin-top: 38px;
+    }
+}

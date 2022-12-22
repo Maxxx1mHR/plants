@@ -17,6 +17,7 @@ html {
 .container {
     max-width: 1440px;
     margin: 0 auto;
+    padding: 0px 110px 0 110px;
 }
 
 body {
@@ -36,3 +37,4 @@ main {
 @import 'blocks/welcome';
 @import 'blocks/about';
 @import 'blocks/service';
+@import 'blocks/prices';
