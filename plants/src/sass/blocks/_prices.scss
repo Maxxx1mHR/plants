@@ -23,15 +23,38 @@
     &__wrapper {
         display: flex;
         justify-content: space-between;
+        padding: 0px 0 115px 0;
     }
     &__form {
+        margin-top: 55px;
         display: flex;
         flex-direction: column;
+        padding: 40px 40px 30px 40px;
+        border: 1px solid #E3E1D5;
+        border-radius: 20px;    
+        input {
+            width: 250px;
+            height: 50px;
+            background: #EDF2EC;
+            border-radius: 20px;
+            border: none;
+            padding: 16px 40px;
+            font-family: 'Inter';
+            font-weight: 700;
+            font-size: 20px;
+            &:not(:first-child) {
+                margin-top: 32px;
+            }
+            &::placeholder {
+                color: #000000;
+            }
+        }
     }
     &__info {
         margin-top: 38px;
     }
     &__btn {
+        margin-top: 38px;
         font-family: 'Inika';
         font-weight: 700;
         font-size: 20px;
