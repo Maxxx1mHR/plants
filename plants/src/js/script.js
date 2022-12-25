@@ -1,0 +1,34 @@
+// const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+
+
+// accordionItemHeaders.forEach(accordionItemHeader => {
+//     accordionItemHeader.addEventListener("click", event => {
+
+//         accordionItemHeader.classList.toggle("active");
+
+//         const accordionItemBody = accordionItemHeader.nextElementSibling;
+       
+
+//         if(accordionItemHeader.classList.contains("active")) {
+//             accordionItemBody.classList.add("active");
+//         }
+//         else {
+//             accordionItemBody.classList.remove("active");
+//         }
+//     });
+// });
+
+
+document.querySelectorAll('.accordion-item-header').forEach((accordionItemHeader) => {  //получаю все header на которые буду нажимать
+    accordionItemHeader.addEventListener('click', () => {
+        accordionItemHeader.classList.toggle('active'); //добавляю класс активности для header + <-> -
+        const accordionItemBody = accordionItemHeader.nextElementSibling; //получаю следующий элемент за header
+        if(accordionItemHeader.classList.contains('active')) {    
+            //если у header есть класс активности, тогда выставляем max-height
+            accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + 'px';
+        }
+        else {
+            accordionItemBody.style.maxHeight = 0;
+        }
+    });
+});
