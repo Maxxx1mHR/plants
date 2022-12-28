@@ -11,6 +11,7 @@
     }
     &__title {
         width: 305px;
+        height: 94px;
         font-family: 'Inika';
         font-weight: 400;
         font-size: 40px;
@@ -27,6 +28,8 @@
         font-size: 20px;
         color: $orange;
         &-btn {
+            width: 161px;
+            text-align: center;
             border: 1px solid $orange;
             border-radius: 5px;
             padding: 12px 40px;
@@ -71,7 +74,7 @@
         text-align: center;
     }
     &__border {
-        padding: 10px 30px 26px 30px;
+        padding: 10px 30px 36px 30px;
         border: 1px solid #E3E1D5;
         border-radius: 0px 0px 20px 20px;
     }
