@@ -127,7 +127,7 @@
             }
             &.active {
                 &::after {
-                    content: url('../icons/arrows/prices_arrow.svg');
+                    content: url('../icons/arrows/prices_arrow_active.svg');
                     transform: rotate(-180deg);
                 }
             }
@@ -136,9 +136,9 @@
             max-height: 0;
             overflow: hidden;
             transition: all 0.6s;
-            &.active {
-                max-height: 400px;
-            }
+            // &.active {
+            //     // max-height: 100%;
+            // }
             &-content {
                 margin-top: 12px;
                 border-top: 0.5px solid #AEA1A1;
@@ -150,6 +150,7 @@
                     line-height: 10px;
                     color: #717171;
                 }
+
                 &-cost {
                     margin-top: 6px;
                     font-family: 'Inter';

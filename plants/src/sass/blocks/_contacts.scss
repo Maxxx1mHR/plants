@@ -30,10 +30,18 @@
         line-height: 40px;
         letter-spacing: 0.05em;
         color: #717171;
-        &::after {
-            content: url('../icons/arrows/prices_arrow.svg');
-            position: absolute;
-            right: 35px;
+        &-header {
+            cursor: pointer;
+            &::after {
+                content: url('../icons/arrows/contact_arrow.svg');
+                position: absolute;
+                right: 35px;
+            }
+        }
+        &-cities {
+            overflow: hidden;
+            // max-height: 0;
         }
     }
+
 }
