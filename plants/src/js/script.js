@@ -33,7 +33,7 @@
 //     });
 // });
 
-
+//Prices 
 document.querySelectorAll('.accordion-item-header').forEach((accordionItemHeader) => {  //получаю все header на которые буду нажимать
     accordionItemHeader.addEventListener('click', (evt) => {
         // console.log(evt.target);
@@ -42,7 +42,7 @@ document.querySelectorAll('.accordion-item-header').forEach((accordionItemHeader
         // elai.classList.toggle('active');
         accordionItemHeader.classList.toggle('active'); //добавляю класс активности для header + <-> -
         const accordionItemBody = accordionItemHeader.nextElementSibling; //получаю следующий элемент за header
-        const accordionItem = accordionItemHeader.parentElement;
+        const accordionItem = accordionItemHeader.parentElement;  //получаю родительский элемент для header 
         console.log(accordionItem); 
         if(accordionItemHeader.classList.contains('active')) {    
             //если у header есть класс активности, тогда выставляем max-height
@@ -55,3 +55,34 @@ document.querySelectorAll('.accordion-item-header').forEach((accordionItemHeader
         }
     });
 });
+
+//Contacts
+document.querySelectorAll('.contacts__accordion-header').forEach((accordionHeader) => {
+    accordionHeader.addEventListener('click', (event) => {
+        accordionHeader.classList.toggle('active');
+        const accordionWrapper = accordionHeader.nextElementSibling; //получаю следующий элемент за header -> contacts__wrapper
+        // accordionWrapper.classList.toggle('active');  //так работает, но не получается сделать плавное раскрытие
+        if(accordionHeader.classList.contains('active')) {
+            accordionWrapper.style.maxHeight = accordionWrapper.scrollHeight + 'px';
+        }
+        else {
+            accordionWrapper.style.maxHeight = 0;
+        }
+        
+        document.querySelectorAll('.contacts__accordion-city').forEach((accordionCity) => {
+            accordionCity.addEventListener('click', (event) => {
+                let content = event.target.innerHTML;
+                // console.log(content);
+               accordionHeader.innerHTML = content;
+            })
+        })
+
+
+
+
+
+    }) 
+})
+
+
+

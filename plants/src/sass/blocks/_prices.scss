@@ -128,7 +128,6 @@
             &.active {
                 &::after {
                     content: url('../icons/arrows/prices_arrow_active.svg');
-                    transform: rotate(-180deg);
                 }
             }
         } 
