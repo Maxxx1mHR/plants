@@ -27,28 +27,26 @@
     }
     &__descr {
         margin-top: 42px;
-        margin-bottom: 48px;
+        // margin-bottom: 48px;
         font-weight: 400;
         font-size: 20px;
         line-height: 35px;
     }
     &__btn {
-        display: inline-block;
         padding: 12px 27px;
+        margin-top: 48px;
         border: 2px solid #E06733;
         border-radius: 10px;
         font-weight: 400;
         font-size: 16px;
         background-color: $main-bgc;
-        text-decoration: none;
         color: #000000;
         transition: all 0.6s;
+        cursor: pointer;
         &:hover {
             background-color: $orange;
             color: #ffffff;
         }
     }
-
-
 
 }

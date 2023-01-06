@@ -2,7 +2,6 @@
     min-height: 560px;
     .container {
         padding-top: 40px;
-        padding-bottom: 115px;
     }
     &__title {
         // margin-top: 38px;
@@ -70,10 +69,10 @@
     }
 
 
-    
-
     &__info {
         margin-top: 38px;
+        display: flex;
+        flex-direction: column;
     }
     &__btn {    
         font-family: 'Inika';
@@ -81,6 +80,7 @@
         font-size: 20px;
         text-align: center;
         color: $orange;
+        background-color: #ffffff;
         border: 1px solid #E06733;
         border-radius: 5px;
         padding: 12px 30px;

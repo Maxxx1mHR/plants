@@ -20,19 +20,21 @@
     }
     &__btns {
         display: flex;
+        margin-top: 10px;
         width: 559px;
         justify-content: space-between;
         align-items: center;
         font-family: 'Inika';
         font-weight: 400;
         font-size: 20px;
-        color: $orange;
         &-btn {
             width: 161px;
             text-align: center;
             border: 1px solid $orange;
             border-radius: 5px;
             padding: 12px 40px;
+            color: $orange;
+            background-color: $main-bgc;
             cursor: pointer;
             transition: all 0.6s;
             &:hover {
