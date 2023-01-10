@@ -107,7 +107,7 @@
         }
     }
     .contacts {
-        max-height: 768px;
+        max-height: 100%;
         padding-top: 40px;
         &__title {
             margin: 0;
@@ -129,7 +129,21 @@
             width: 200px;
             height: 250px;
         }
-
     }
+    .footer {
+        flex-direction: column;
+        padding: 33px 0 18px 0;
+        line-height: 24px;
+        &__git {
+            margin-right: 0;
+        }
+        &__name {
+            margin-top: 16px;
+        }
+        &__social {
+            margin-top: 27px;
+        }
+    }
+
 
 }
