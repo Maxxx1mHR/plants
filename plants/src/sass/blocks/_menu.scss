@@ -2,7 +2,7 @@ header {
     background-color: $main-bgc;
 }
 .menu {
-    min-height: 134px;
+    max-height: 134px;
     display: flex;
     justify-content: space-between;
     align-items: center;
