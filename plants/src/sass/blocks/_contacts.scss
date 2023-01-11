@@ -7,6 +7,9 @@
     &__wrapper {
         display: flex;
     }
+    &__woman {
+        margin-top: 0;
+    }
     &__title {
         margin-top: 7px;
         margin-left: 113px;
@@ -152,4 +155,8 @@
             color: #ffffff;
         }
     }
+}
+
+.test {
+    // margin-top: 250px;
 }

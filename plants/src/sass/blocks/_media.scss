@@ -109,12 +109,20 @@
     .contacts {
         max-height: 100%;
         padding-top: 40px;
+        &__info {
+            margin: 0;
+            &.active {
+                position: static;
+                margin-top: 60px;
+            }
+        }
         &__title {
             margin: 0;
             font-size: 40px;
             line-height: 52px;
         }
         &__accordion {
+            display: inline-block;
             margin-left: 0;
         }
         &__wrapper {
@@ -144,6 +152,10 @@
             margin-top: 27px;
         }
     }
+}
 
-
+@media(max-width: 380px) {
+    .container {
+        padding: 36px 25px 20px 25px;
+    }
 }

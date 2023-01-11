@@ -1,3 +1,4 @@
+
 //Service 
 const btns = document.querySelectorAll('.service__btns-btn');
 const serviceBlocks = document.querySelectorAll('.service__block');
@@ -103,3 +104,20 @@ console.log('3.Вёрстка соответствует макету +48\n 3.1.
 console.log('4.Требования к css +12\n 4.1.Для построения сетки используются флексы или гриды +2\n 4.2.При уменьшении масштаба страницы браузера вёрстка размещается по центру, а не сдвигается в сторону +2\n 4.3.Фоновый цвет тянется на всю ширину страницы +2\n 4.4.Иконки добавлены в формате .svg. SVG может быть добавлен любым способом. Обращаем внимание на формат, а не на способ добавления +2\n 4.5.Изображения добавлены в формате .jpg или .png +2\n 4.6.Есть favicon +2');
 console.log('5.Интерактивность, реализуемая через css +20\n 5.1.Плавная прокрутка по якорям +5\n 5.2.Cсылки в футере при нажатии на них ведут на гитхаб автора проекта и на страницу курса https://rs.school/js-stage0/ +5\n 5.3.Интерактивность включает в себя не только изменение внешнего вида курсора, например, при помощи свойства cursor: pointer, но и другие визуальные эффекты, например, изменение цвета фона или цвета шрифта. Если в макете указаны стили при наведении и клике, для элемента указываем эти стили. Если в макете стили не указаны, реализуете их по своему усмотрению, руководствуясь общим стилем макета +5\n 5.4.Обязательное требование к интерактивности: плавное изменение внешнего вида элемента при наведении и клике не влияющее на соседние элементы +5\n\n');
 console.log('Оценка за задание 100 баллов (110)');
+
+
+
+//For contacts section 768px, for add margin between img and accordion. 
+const woman = document.querySelector('.contacts__woman');
+const accordion = document.querySelector('.contacts__accordion');
+accordionCity.forEach((item) => {
+    item.addEventListener('click', () => {
+        let dataTab = item.getAttribute('data-tab'); //get #tab_n, n = 1,2,3,4
+        let currentTab = document.querySelector(dataTab); //class="contacts__info"  id="tab_n"
+        if (currentTab.classList.contains('active')) {
+            console.log(currentTab);
+            woman.style.marginTop = '14px';
+            accordion.style.marginTop = '60px';
+        }
+    });
+});
