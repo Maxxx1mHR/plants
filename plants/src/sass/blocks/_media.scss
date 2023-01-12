@@ -159,26 +159,36 @@
         max-width: 330px;
     }
     .menu {
-        padding: 36px 0;
+        position: relative;
         max-height: 96px;
+        &__block {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            height: 100%;
+            width: 60%;
+            opacity: 0;
+            visibility: hidden;
+            transition: all .6s;
+            &.active {
+                left: 0;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
         &__list {
             position: fixed;
             flex-direction: column;
-            left: -100%;
-            top: 0;
             height: 100%;
             width: 60%;
-            background-color: $main-bgc;
             justify-content: center;
             align-items: center;
             z-index: 1;
-            &.active {
-                left: 0;
-            }
+            background-color: $main-bgc;
         }
         &__item {
-            margin-top: 30px;
-            margin-bottom: 30px;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
         &__link {
             font-size: 26px;
@@ -186,17 +196,99 @@
             padding: 20px;
         }
         &__overlay {
-            background-color: #000000;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            position: fixed;
-            opacity: 0;
-            &.active {
-                opacity: 0.7;
+            background-color: #000;
+            opacity: .7;
+        }
+    }
+    .hamburger {
+        span {
+            display: block;
+            width: 40px;
+            height: 2px;
+            background-color: #717171; 
+            &:not(:first-child) {
+                margin-top: 8px;
             }
         }
+    }
+    .close {
+        position: absolute;
+        top: 30px;
+        right: 50px;
+        display: block;
+        width: 50px;
+        height: 50px;
+        z-index: 1;
+    }
+    .welcome {
+        &__wrapper {
+            padding: 24px 0 24px 0;
+        }
+        &__leafs {
+            display: none;
+        }
+        &__title {
+            font-size: 25px;
+            line-height: 35px;
+        }
+        &__btn {
+            font-size: 10px;
+            line-height: 20px;
+            padding: 8px 18px;
+        }
+    }
+    .about {
+        &__wrapper {
+            padding: 30px 0;
+        }
+        &__title {
+            font-size: 25px;
+            line-height: 33px;
+            height: 100%;
+        }
+        &__descr {
+            height: 100%;
+            font-size: 15px;
+            line-height: 25px;
+        }
+        &__houseplant {
+            margin: 0 auto;
+            width: 150px;
+            height: 147px;
+        }
+    }
+    .service {
+        padding: 30px 0 30px 0;
+        &__img-wrapper {
+            justify-content: center;
+        }
+        &__btns {
+            width: 100%;
+            flex-wrap: wrap;
+            margin-top: 35px;   
+            &-btn {
+                &:nth-child(3) {
+                    margin-top: 9px;
+                }
+            }
+        }
+    }
+    .prices {
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__left {
+            margin: 0 auto;
+            text-align: center; 
+        } 
+    }
+    .accordion {
+        margin-top: 40px;
     }
 
 }
