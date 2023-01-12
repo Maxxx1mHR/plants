@@ -170,6 +170,7 @@
             opacity: 0;
             visibility: hidden;
             transition: all .6s;
+            z-index: 2;
             &.active {
                 left: 0;
                 opacity: 1;
@@ -183,7 +184,7 @@
             width: 60%;
             justify-content: center;
             align-items: center;
-            z-index: 1;
+            z-index: 3;
             background-color: $main-bgc;
         }
         &__item {
@@ -223,7 +224,7 @@
         display: block;
         width: 50px;
         height: 50px;
-        z-index: 1;
+        z-index: 3;
     }
     .welcome {
         &__wrapper {
@@ -281,14 +282,92 @@
     .prices {
         &__wrapper {
             flex-direction: column;
+            align-items: center;
         }
         &__left {
-            margin: 0 auto;
+            // margin: 0 auto;
             text-align: center; 
+        }
+        &__right{
+            margin-top: 19px;
+            text-align: center;
+        }
+        &__btn {
+            margin: 22px auto 0 auto;
+        }
+        &__img {
+            display: none;
         } 
     }
     .accordion {
         margin-top: 40px;
+        padding: 29px 22px;
+        width: 224px;
+        &-item {
+            width: 180px;
+            padding: 16px 40px 16px 30px;
+            &-header {
+                font-size: 15px;
+                line-height: 20px;  
+            }
+        }
+    }
+    .contacts {
+        &__title {
+            font-size: 25px;
+            line-height: 33px;
+        }
+        &__accordion {
+            margin-top: 80px;
+            width: 300px;
+        }
+        &__woman {
+            margin-top: 132px;
+            margin-left: 0;
+            width: 100px;
+            height: 124px;
+        }
+        &__info {
+           &-wrapper {
+            width: 282px;
+            line-height: 20px;
+            padding: 23px 36px;
+           }
+           &.active {
+            margin-top: 50px;
+           }
+        }
+        &__city {
+            span {
+                margin-left: 23px;
+                color: #717171;
+    
+            }
+        }
+        &__phone {
+            margin-top: 5px;
+            span {
+                margin-left: 5px;  
+                color: #717171;
+            }
+        }
+        &__adress {
+            margin-top: 5px;
+            display: grid;
+            grid-template-columns: 65px auto;
+            align-items: center;
+            span {
+                margin-left: 10px;
+                color: #717171;
+            }
+        }
+    }
+    .footer {
+        padding: 22px 0 7px 0;
+        &__social {
+            margin-top: 14px;
+        }
+
     }
 
 }
