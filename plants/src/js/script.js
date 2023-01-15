@@ -130,7 +130,6 @@ accordionCity.forEach((item) => {
 const hamburger = document.querySelector('.hamburger');
 const menu = document.querySelector('.menu__block');
 const close = document.querySelector('.close');
-console.log(hamburger);
 hamburger.addEventListener('click', () => {
     menu.classList.add('active');
 });
