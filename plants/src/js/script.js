@@ -1,3 +1,5 @@
+
+
 //Service 
 const btns = document.querySelectorAll('.service__btns-btn');
 const serviceBlocks = document.querySelectorAll('.service__block');
@@ -97,9 +99,51 @@ accordionCity.forEach((item) => {
 });
 
 
-console.log('1.Вёрстка валидная +10');
-console.log('2.Вёрстка семантическая +20\n 2.1.На странице присутсвуют элементы <header>, <main>, <footer> +3\n 2.2.Пять элементов <section> +3\n 2.3.Четыре заголовка <h2> (количество секций минус одна, у которой заголовок <h1>) +3\n 2.4.Один элемент <nav> (панель навигации) +3\n 2.5.Два списка ul > li > a (панель навигации, ссылки на соцсети) +3\n 2.7.Пять кнопок <button> +2');
-console.log('3.Вёрстка соответствует макету +48\n 3.1.Блок <header> +6\n 3.2.Cекция welcome +7\n 3.3.Cекция about +7\n 3.4.Cекция service +7\n 3.5.Cекция prices +7\n 3.6.Cекция contacts +7\n 3.7.Блок <footer> +7');
-console.log('4.Требования к css +12\n 4.1.Для построения сетки используются флексы или гриды +2\n 4.2.При уменьшении масштаба страницы браузера вёрстка размещается по центру, а не сдвигается в сторону +2\n 4.3.Фоновый цвет тянется на всю ширину страницы +2\n 4.4.Иконки добавлены в формате .svg. SVG может быть добавлен любым способом. Обращаем внимание на формат, а не на способ добавления +2\n 4.5.Изображения добавлены в формате .jpg или .png +2\n 4.6.Есть favicon +2');
-console.log('5.Интерактивность, реализуемая через css +20\n 5.1.Плавная прокрутка по якорям +5\n 5.2.Cсылки в футере при нажатии на них ведут на гитхаб автора проекта и на страницу курса https://rs.school/js-stage0/ +5\n 5.3.Интерактивность включает в себя не только изменение внешнего вида курсора, например, при помощи свойства cursor: pointer, но и другие визуальные эффекты, например, изменение цвета фона или цвета шрифта. Если в макете указаны стили при наведении и клике, для элемента указываем эти стили. Если в макете стили не указаны, реализуете их по своему усмотрению, руководствуясь общим стилем макета +5\n 5.4.Обязательное требование к интерактивности: плавное изменение внешнего вида элемента при наведении и клике не влияющее на соседние элементы +5\n\n');
-console.log('Оценка за задание 100 баллов (110)');
+//For contacts section 768px, for add margin between img and accordion. 
+const woman = document.querySelector('.contacts__woman');
+const accordion = document.querySelector('.contacts__accordion');
+accordionCity.forEach((item) => {
+    item.addEventListener('click', () => {
+        let dataTab = item.getAttribute('data-tab'); //get #tab_n, n = 1,2,3,4
+        let currentTab = document.querySelector(dataTab); //class="contacts__info"  id="tab_n"
+        if (currentTab.classList.contains('active')) {
+            console.log(currentTab);
+            woman.style.marginTop = '14px';
+            accordion.style.marginTop = '60px';
+        }
+    });
+});
+
+//Делигирование событий на menu__list. Скрытие меню при клике на элемент. 
+const menuList = document.querySelector('.menu__list');
+menuList.addEventListener('click', (event) => {
+    if (event.target && event.target.classList.contains('menu__link')) {
+        menu.classList.remove('active');
+    }
+});
+
+//Close menu when click outside block. 
+const menuOverlay = document.querySelector('.menu__overlay');
+menuOverlay.addEventListener('click', (e) => {
+    if (e.target === menuOverlay) {
+        menu.classList.remove('active');
+    }
+});
+
+
+//Hamburger, menu 
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('.menu__block');
+const close = document.querySelector('.close');
+hamburger.addEventListener('click', () => {
+    menu.classList.add('active');
+});
+close.addEventListener('click', () => {
+    menu.classList.remove('active');    
+})
+
+
+console.log('1.Вёрстка соответствует макету. Ширина экрана 768px +24');
+console.log('2.Вёрстка соответствует макету. Ширина экрана 380px +24');
+console.log('3.Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки. Весь контент страницы при этом сохраняется: не обрезается и не удаляется +15');
+console.log('4.На ширине экрана 380рх и меньше реализовано адаптивное меню +22');
