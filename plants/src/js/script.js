@@ -23,45 +23,130 @@ const serviceBlocks = document.querySelectorAll('.service__block');
 //     }); 
 // });
 
-btns.forEach((item) => {
-    item.addEventListener('click', () => {
-        let btn = item.getAttribute('data-blur');
+// btns.forEach((item) => {
+//     item.addEventListener('click', () => {
+//         let btn = item.getAttribute('data-blur');
     
-        serviceBlocks.forEach((item) => {
-            item.classList.contains(btn) ? item.classList.remove('filter-blur') : item.classList.add('filter-blur');
-        });
+//         serviceBlocks.forEach((item) => {
+//             item.classList.contains(btn) ? item.classList.remove('filter-blur') : item.classList.add('filter-blur');
+//         });
 
-        let currentBtn = document.querySelector(`[data-blur='${btn}']`);
-        btns.forEach((item) => {
-            item.classList.remove('bgc_orange');
-        });
-        currentBtn.classList.add('bgc_orange');
-    }); 
+//         let currentBtn = document.querySelector(`[data-blur='${btn}']`);
+//         btns.forEach((item) => {
+//             item.classList.remove('bgc_orange');
+//         });
+//         currentBtn.classList.add('bgc_orange');
+//     }); 
+// });
+
+
+
+btns.forEach(btn => { 
+    test = document.querySelectorAll('.service__btns-btn .bgc_orange');
+    btn.addEventListener('click', () => {
+        let blur = btn.getAttribute('data-blur');
+        
+
+     
+        // if(btn.classList.contains('bgc_orange')) {
+        //     btn.classList.remove('bgc_orange')
+        // } else {
+        //     btn.classList.add('bgc_orange')
+        // }
+    
+        test = document.querySelectorAll('.service__btns-btn.bgc_orange').length + 1;
+        if (test <= 2) {    
+            // btn.classList.add('bgc_orange')
+            if(btn.classList.contains('bgc_orange')) {
+                    btn.classList.remove('bgc_orange')
+                } else {
+                    btn.classList.add('bgc_orange')
+                }
+        } else {
+            btn.classList.remove('bgc_orange')
+        }
+
+        console.log(document.querySelectorAll('.service__btns-btn.bgc_orange'));
+        console.log(btns);
+        
+        serviceBlocks.forEach(block => {
+            
+            if(!block.classList.contains(blur)) {
+                block.classList.add('filter-blur');
+            }
+
+            if(btn.classList.contains('bgc_orange') && block.classList.contains(blur)) {
+                block.classList.remove('filter-blur');
+            }
+            
+
+          
+        }) 
+
+        // btn.classList.toggle('bgc_orange');
+
+    });
 });
+
 
 
 //Prices 
-document.querySelectorAll('.accordion-item-header').forEach((accordionItemHeader) => {  //получаю все header на которые буду нажимать
-    accordionItemHeader.addEventListener('click', (evt) => {
-        // console.log(evt.target);
-        // const elai = evt.target.closest('.accordion-item');
-        // console.log(elai);
-        // elai.classList.toggle('active');
-        accordionItemHeader.classList.toggle('active'); //добавляю класс активности для header + <-> -
-        const accordionItemBody = accordionItemHeader.nextElementSibling; //получаю следующий элемент за header
-        const accordionItem = accordionItemHeader.parentElement;  //получаю родительский элемент для header 
-        // console.log(accordionItem); 
-        if(accordionItemHeader.classList.contains('active')) {    
-            //если у header есть класс активности, тогда выставляем max-height
+// document.querySelectorAll('.accordion-item-header').forEach((accordionItemHeader) => {  //получаю все header на которые буду нажимать
+//     accordionItemHeader.addEventListener('click', (evt) => {
+//         // console.log(evt.target);
+//         // const elai = evt.target.closest('.accordion-item');
+//         // console.log(elai);
+//         // elai.classList.toggle('active');
+//         accordionItemHeader.classList.toggle('active'); //добавляю класс активности для header + <-> -
+//         const accordionItemBody = accordionItemHeader.nextElementSibling; //получаю следующий элемент за header
+//         const accordionItem = accordionItemHeader.parentElement;  //получаю родительский элемент для header 
+//         // console.log(accordionItem); 
+//         if(accordionItemHeader.classList.contains('active')) {    
+//             //если у header есть класс активности, тогда выставляем max-height
+//             accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + 'px';
+//             accordionItem.classList.add('active');
+//         }
+//         else {
+//             accordionItemBody.style.maxHeight = 0;
+//             accordionItem.classList.remove('active');
+//         }
+//     });
+// });
+
+const itemHeader = document.querySelectorAll('.accordion-item-header');
+
+itemHeader.forEach(head => {
+    head.addEventListener('click', () =>{
+        const accordionItemBody = head.nextElementSibling;
+        const accordionItem = head.parentElement;
+
+        if (accordionItemBody.style.maxHeight) {
+            document.querySelectorAll('.accordion-item-body').forEach(el => {el.style.maxHeight = null});
+           
+            document.querySelectorAll('.accordion-item').forEach(el => {el.classList.remove('active')})
+
+            itemHeader.forEach(el => {el.classList.remove('active')});
+        } else {
+            //drop menu
+            document.querySelectorAll('.accordion-item-body').forEach(el => {el.style.maxHeight = null});
             accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + 'px';
+
+            //Цвет фона
+            document.querySelectorAll('.accordion-item').forEach(el => {el.classList.remove('active')})
             accordionItem.classList.add('active');
+
+            //Стрелка
+            itemHeader.forEach(el => {el.classList.remove('active')});
+            head.classList.add('active');
         }
-        else {
-            accordionItemBody.style.maxHeight = 0;
-            accordionItem.classList.remove('active');
-        }
+
     });
 });
+
+
+
+
+
 
 //Contacts
 const accordionHeader = document.querySelector('.contacts__accordion-header');
@@ -143,7 +228,7 @@ close.addEventListener('click', () => {
 })
 
 
-console.log('1.Вёрстка соответствует макету. Ширина экрана 768px +24');
-console.log('2.Вёрстка соответствует макету. Ширина экрана 380px +24');
-console.log('3.Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки. Весь контент страницы при этом сохраняется: не обрезается и не удаляется +15');
-console.log('4.На ширине экрана 380рх и меньше реализовано адаптивное меню +22');
+// console.log('1.Вёрстка соответствует макету. Ширина экрана 768px +24');
+// console.log('2.Вёрстка соответствует макету. Ширина экрана 380px +24');
+// console.log('3.Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки. Весь контент страницы при этом сохраняется: не обрезается и не удаляется +15');
+// console.log('4.На ширине экрана 380рх и меньше реализовано адаптивное меню +22');
