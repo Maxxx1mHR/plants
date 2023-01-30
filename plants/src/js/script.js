@@ -23,70 +23,22 @@ const serviceBlocks = document.querySelectorAll('.service__block');
 //     }); 
 // });
 
-// btns.forEach((item) => {
-//     item.addEventListener('click', () => {
-//         let btn = item.getAttribute('data-blur');
+btns.forEach((item) => {
+    item.addEventListener('click', () => {
+        let btn = item.getAttribute('data-blur');
     
-//         serviceBlocks.forEach((item) => {
-//             item.classList.contains(btn) ? item.classList.remove('filter-blur') : item.classList.add('filter-blur');
-//         });
+        serviceBlocks.forEach((item) => {
+            item.classList.contains(btn) ? item.classList.remove('filter-blur') : item.classList.add('filter-blur');
+        });
 
-//         let currentBtn = document.querySelector(`[data-blur='${btn}']`);
-//         btns.forEach((item) => {
-//             item.classList.remove('bgc_orange');
-//         });
-//         currentBtn.classList.add('bgc_orange');
-//     }); 
-// });
-
-
-
-btns.forEach(btn => { 
-    test = document.querySelectorAll('.service__btns-btn .bgc_orange');
-    btn.addEventListener('click', () => {
-        let blur = btn.getAttribute('data-blur');
-        
-
-     
-        // if(btn.classList.contains('bgc_orange')) {
-        //     btn.classList.remove('bgc_orange')
-        // } else {
-        //     btn.classList.add('bgc_orange')
-        // }
-    
-        test = document.querySelectorAll('.service__btns-btn.bgc_orange').length + 1;
-        if (test <= 2) {    
-            // btn.classList.add('bgc_orange')
-            if(btn.classList.contains('bgc_orange')) {
-                    btn.classList.remove('bgc_orange')
-                } else {
-                    btn.classList.add('bgc_orange')
-                }
-        } else {
-            btn.classList.remove('bgc_orange')
-        }
-
-        console.log(document.querySelectorAll('.service__btns-btn.bgc_orange'));
-        console.log(btns);
-        
-        serviceBlocks.forEach(block => {
-            
-            if(!block.classList.contains(blur)) {
-                block.classList.add('filter-blur');
-            }
-
-            if(btn.classList.contains('bgc_orange') && block.classList.contains(blur)) {
-                block.classList.remove('filter-blur');
-            }
-            
-
-          
-        }) 
-
-        // btn.classList.toggle('bgc_orange');
-
-    });
+        let currentBtn = document.querySelector(`[data-blur='${btn}']`);
+        btns.forEach((item) => {
+            item.classList.remove('bgc_orange');
+        });
+        currentBtn.classList.add('bgc_orange');
+    }); 
 });
+
 
 
 
