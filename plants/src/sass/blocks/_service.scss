@@ -1,0 +1,94 @@
+.service {
+    background-color: $main-bgc;
+    padding: 40px 0 120px 0;
+    &__container {
+        // padding: 40px 0 120px 0;
+    }
+    &__wrapper {
+        display: flex;
+        width: 1007px;
+        justify-content: space-between;
+    }
+    &__title {
+        width: 305px;
+        height: 94px;
+        font-family: 'Inika';
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 52px;
+        color: $green;
+    }
+    &__btns {
+        display: flex;
+        margin-top: 10px;
+        width: 559px;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Inika';
+        font-weight: 400;
+        font-size: 20px;
+        &-btn {
+            width: 161px;
+            text-align: center;
+            border: 1px solid $orange;
+            border-radius: 5px;
+            padding: 12px 40px;
+            color: $orange;
+            background-color: $main-bgc;
+            cursor: pointer;
+            transition: all 0.6s;
+            &:hover {
+                background-color: $orange;
+                color: #ffffff;
+            }
+            &.bgc_orange {
+                background-color: $orange;
+                color: #ffffff;
+            }
+        }
+    }
+    &__img-wrapper {
+        margin-top: 90px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 330px);
+        column-gap: 115px;
+        grid-template-rows: repeat(2, minmax(450px, auto));
+        row-gap: 55px;
+        grid-auto-rows: 450px;
+    }
+    &__block {
+        transition: all 0.6s;
+        &.filter-blur {
+            filter: blur(2px);
+        }
+    }
+    &__img {
+        vertical-align: top;
+        border-radius: 20px 20px 0 0;
+    }
+    &__subtitle {
+        // margin-top: 10px;
+        font-family: 'Inter';
+        font-weight: 700;
+        font-size: 20px;
+        // line-height: 20px;
+        color: $orange;
+        text-align: center;
+    }
+    &__descr {
+        margin-top: 10px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        // line-height: 20px;
+        color: #717171;
+        text-align: center;
+    }
+    &__border {
+        padding: 10px 30px 36px 30px;
+        border: 1px solid #E3E1D5;
+        border-radius: 0px 0px 20px 20px;
+    }
+
+}

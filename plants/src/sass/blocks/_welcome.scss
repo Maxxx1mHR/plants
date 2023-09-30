@@ -1,0 +1,52 @@
+.welcome {
+    max-height: 532px;
+    background-color: $main-bgc;
+    &__leafs {
+        width: 448px;
+        height: 408px;
+    }
+    &__wrapper {
+    padding: 62px 0;
+    display: flex;
+
+    justify-content: space-between;
+    font-family: Inter;
+    }
+    &__block {
+        width: 549px;
+    }
+    &__title {
+        margin-top: 36px;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 50px;  
+        color: #717171;
+        span {
+            color: $green;
+        }  
+    }
+    &__descr {
+        margin-top: 42px;
+        // margin-bottom: 48px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 35px;
+    }
+    &__btn {
+        padding: 12px 27px;
+        margin-top: 48px;
+        border: 2px solid #E06733;
+        border-radius: 10px;
+        font-weight: 400;
+        font-size: 16px;
+        background-color: $main-bgc;
+        color: #000000;
+        transition: all 0.6s;
+        cursor: pointer;
+        &:hover {
+            background-color: $orange;
+            color: #ffffff;
+        }
+    }
+
+}

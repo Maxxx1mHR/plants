@@ -1,0 +1,31 @@
+.about {
+    max-height: 666px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 94px 0;
+    }
+    &__block {
+        max-width: 605px;
+    }
+    &__title {
+        max-width: 463px;
+        margin-top: 67px;
+        font-family: 'Inika';
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 52px;
+        color: $green;
+        span {
+            color: $orange;
+        }
+    }
+    &__descr {
+        margin-top: 40px;
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        color: #636060;
+    }
+}
