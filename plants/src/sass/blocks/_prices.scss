@@ -1,12 +1,10 @@
 .prices {
     min-height: 560px;
-    .container {
-        padding-top: 40px;
-    }
+    padding-top: 40px;
     &__title {
         // margin-top: 38px;
-        display: flex;
-        justify-content: space-between;
+        // display: flex;
+        // justify-content: space-between;
     }
     &__left {
         font-family: 'Inter';
@@ -14,7 +12,7 @@
         font-size: 40px;
         color: #000000;
     }
-    &__right {
+    &__right { 
         font-family: 'Inter';
         font-weight: 700;
         font-size: 40px;
@@ -70,11 +68,13 @@
 
 
     &__info {
-        margin-top: 38px;
         display: flex;
-        flex-direction: column;
+        flex-direction: column; 
+        align-items: flex-end   
     }
     &__btn {    
+        margin-top: 38px;
+        width: 161px;
         font-family: 'Inika';
         font-weight: 700;
         font-size: 20px;
@@ -97,10 +97,11 @@
 }
 
 .accordion {
+    margin-top: 60px;
     border: 1px solid #E3E1D5;
     border-radius: 20px;  
-    padding: 40px 40px 30px 40px;    
-    height: 100%;
+    padding: 34px 40px 30px 40px;    
+    // height: 100%;
     &-item {
         width: 250px;
         padding: 14px 40px;
